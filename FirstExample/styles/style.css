@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    line-height: 100vh;
+    text-align: center;
+    font-size: 50px;
+    font-family: arial, sans-serif;
+}
+span{
+    font-weight: bold;
+    font-family: monospace;
+}
