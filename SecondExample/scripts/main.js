@@ -7,10 +7,15 @@ setInterval(() => {
     const nowTime = new Date().getTime();
     // const time = Math.floor((endTime - nowTime)/1000);
     // const time = endTime - nowTime;
-    const days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
-    const hours = Math.floor((endTime / (1000 * 60 * 60)) - (nowTime / (1000 * 60 * 60)))%24;
-    const minutes = Math.floor((endTime / (1000 * 60)) - (nowTime / (1000 * 60 )))%60;
-    const seconds = Math.floor((endTime / (1000)) - (nowTime / (1000)))%60;
+    let days = Math.floor((endTime / (1000 * 60 * 60 * 24)) - (nowTime / (1000 * 60 * 60 * 24)));
+    let hours = Math.floor((endTime / (1000 * 60 * 60)) - (nowTime / (1000 * 60 * 60)))%24;
+    let minutes = Math.floor((endTime / (1000 * 60)) - (nowTime / (1000 * 60 )))%60;
+    let seconds = Math.floor((endTime / (1000)) - (nowTime / (1000)))%60;
+
+    days = days <10 ? `0${days}` : days;
+    hours = hours <10 ? `0${hours}` : hours;
+    minutes = minutes <10 ? `0${minutes}` : minutes;
+    seconds = seconds <10 ? `0${seconds}` : seconds;
 
     spanD.textContent = days;
     spanH.textContent = hours;
